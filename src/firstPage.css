@@ -144,10 +144,12 @@ a {
     margin-right: 15px;
     cursor: pointer;
     border-radius: 15px;
+    font-size: 15px;
 }
 
 .btn-2 {
     background-color: #000;
+    font-size: 15px;
     color: #c94e02;
     outline: none;
     border: none;
@@ -168,6 +170,8 @@ a {
 .nav-bar-2 {
     padding: 20px;
 }
+
+
 
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -240,4 +244,5 @@ a {
     .nav-bar-2 {
         margin-left: 0px;
     }
+    
 }
