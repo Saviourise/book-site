@@ -58,6 +58,7 @@
     margin-right: 20px;
     font-size: larger;
     mix-blend-mode: difference;
+    color: #000;
 }
 
 .fa-circle-user {
@@ -241,6 +242,8 @@ a {
     }
     .nav-contact-2 {
         margin-right: 20px;
+        mix-blend-mode: difference;
+        color: #000;
     }
     .nav-bar-2 {
         margin-left: 0px;
