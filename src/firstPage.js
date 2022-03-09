@@ -102,7 +102,7 @@ function FirstPage() {
                 <div className="section-1-body">
                     <div className="big-text-container">
                         <div className="big-text-1 big-text">
-                            "NEVER REGRET ANYTHING THAT MADE YOU SMILE" <br></br> <i className="john">MARK TWAIN -</i> 
+                            "NEVER REGRET ANYTHING THAT MADE YOU SMILE :)" <br></br> <i className="john">MARK TWAIN -</i> 
                         </div>
                         <div className="big-text-2 big-text">
                             "IF YOU WANT RAINBOW, YOU GOTTA PUT UP WITH THE RAIN" <br></br> <i className="john">DOLLY PARTON -</i> 
