@@ -7,7 +7,7 @@
     letter-spacing: -1px;
 }
 
-.body {
+.main {
     background: linear-gradient(-70deg, #c94e02 48%, rgba(0, 0, 0, 0) 48%), url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaHxlbnwwfHwwfHw%3D&w=1000&q=80');
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,6 +23,10 @@
     height: 80vh;
     align-items: flex-end;
     align-self: flex-end;
+}
+
+.header-2 {
+    display: none;
 }
 
 .header {
@@ -59,12 +63,17 @@
     font-size: 30px;
 }
 
+.fa-circle-user-2 {
+    font-size: 25px;
+    color: black;
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    
+    flex: 70%;
 }
 
 a {
@@ -152,6 +161,57 @@ a {
     margin-left: 10px;
 }
 
+.menu-bar {
+    color: #c94e02;
+}
+
+.nav-bar-2 {
+    padding: 20px;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+
+  /* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  .main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
 
 @media screen and (max-width: 400px) {
     .body {
@@ -165,13 +225,19 @@ a {
         width: 69%;
     }
     .header {
-        display: block;
-    }
-    .nav-contact {
         display: none;
     }
-    .nav-bar {
-        font-size: 60%;
+    .header-2 {
+        display: flex;
         flex: 1;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+    .nav-contact-2 {
+        margin-right: 20px;
+    }
+    .nav-bar-2 {
+        margin-left: 0px;
     }
 }
