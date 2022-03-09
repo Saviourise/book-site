@@ -57,6 +57,7 @@
 #contact-header-name {
     margin-right: 20px;
     font-size: larger;
+    mix-blend-mode: difference;
 }
 
 .fa-circle-user {
