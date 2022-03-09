@@ -41,9 +41,10 @@ function FirstPage() {
 
         <div className="sidenav">
             <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+            <a href="#">Home</a>
             <a href="#">About</a>
+            <a href="#">Books</a>
             <a href="#">Services</a>
-            <a href="#">Clients</a>
             <a href="#">Contact</a>
         </div>
 
@@ -72,10 +73,10 @@ function FirstPage() {
                         <a href="#section-1">About</a>
                     </span>
                     <span className="nav-item">
-                        <a href="#section-1">Certificates</a>
+                        <a href="#section-1">Books</a>
                     </span>
                     <span className="nav-item">
-                        <a href="#section-1">Projects</a>
+                        <a href="#section-1">Services</a>
                     </span>
                     <span className="nav-item">
                         <a href="#section-1">Contact</a>
