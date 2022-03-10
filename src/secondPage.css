@@ -38,6 +38,46 @@
     justify-content: space-between;
 }
 
+.who-we-are {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px 40px 20px;
+}
+
+.who-we-are-big-text {
+    flex: 20%;
+    width: 100%;
+    padding-right: 10px;
+    font-size: 30px;
+    transform: rotate(90deg);
+    color: #c94e02;
+    opacity: .5;
+}
+
+.btn-3 {
+    margin-top: 20px;
+    background-color: none;
+    font-size: 15px;
+    color: #c94e02;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+.who-we-are-small-text {
+    flex: 80%;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    font-size: 20px;
+    text-align: justify;
+    font-size: 100%;
+}
+
 .svg-section {
     flex: 50%;
     width: 100%;
@@ -90,5 +130,8 @@ i {
         width: 100%;
         font-size: 15px;
         text-align: justify;
+    }
+    .who-we-are-small-text {
+        font-size: 15px;
     }
 }

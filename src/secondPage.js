@@ -1,4 +1,7 @@
-import './secondPage.css';
+import './secondPage.css';import { Link, animateScroll as scroll } from "react-scroll";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faMessage, faUserCircle, faBarsStaggered, faBlog, faBook } from '@fortawesome/free-solid-svg-icons'
+
 
 function SecondPage () {
     return (
@@ -20,6 +23,29 @@ function SecondPage () {
             </section>
 
             <section>
+
+            </section>
+
+            <section className='who-we-are'>
+                <section className='who-we-are-big-text'>
+                    WHO WE ARE
+                </section>
+                <section className='who-we-are-small-text'>
+                    We are a group of individuals who have come together with a common goal and interest namely "Our love for books". So this motivated us to create a platform which makes it easy for books and other resources to be readily available to the outside world thereby giving birth to "Site Name". Here you can get your hands on thousands of different types of books, science books, art books, articles, research works and many more with just the click of a button. And believe me, we are not exaggerating. So why don't you dive right in and explore some books right now??!!<br>
+                    </br>
+                    <button className="btn-3">
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                        >
+                            Books 
+                        </Link>
+                        <FontAwesomeIcon icon={faBook} className="jfj" /></button>
+                </section>
 
             </section>
         </div>

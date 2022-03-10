@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import './firstPage.css';
-import SecondPage from './secondPage';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faMessage, faUserCircle, faBarsStaggered, faBlog } from '@fortawesome/free-solid-svg-icons'
@@ -48,7 +47,6 @@ function FirstPage() {
                 to="body"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={1000}
                 onClick={closeNav}
             >
@@ -59,7 +57,6 @@ function FirstPage() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={1000}
                 onClick={closeNav}
             >
@@ -70,7 +67,6 @@ function FirstPage() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={1000}
                 onClick={closeNav}
             >
@@ -81,7 +77,6 @@ function FirstPage() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={1000}
                 onClick={closeNav}
             >
@@ -92,7 +87,6 @@ function FirstPage() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={1000}
                 onClick={closeNav}
             >
@@ -125,7 +119,6 @@ function FirstPage() {
                             to="body"
                             spy={true}
                             smooth={true}
-                            offset={-70}
                             duration={1000}
                             className="links"
                         >
@@ -138,7 +131,6 @@ function FirstPage() {
                             to="about"
                             spy={true}
                             smooth={true}
-                            offset={-70}
                             duration={1000}
                             className="links"
                         >
@@ -151,7 +143,6 @@ function FirstPage() {
                             to="about"
                             spy={true}
                             smooth={true}
-                            offset={-70}
                             duration={1000}
                             className="links"
                         >
@@ -164,7 +155,6 @@ function FirstPage() {
                             to="about"
                             spy={true}
                             smooth={true}
-                            offset={-70}
                             duration={1000}
                             className="links"
                         >
@@ -177,7 +167,6 @@ function FirstPage() {
                             to="about"
                             spy={true}
                             smooth={true}
-                            offset={-70}
                             duration={1000}
                             className="links"
                         >
