@@ -214,8 +214,9 @@ function FirstPage() {
                                 duration={1000}
                             >
                                 Contact Us 
+                                <FontAwesomeIcon icon={faMessage} className='jfj' />
                             </Link>
-                            <FontAwesomeIcon icon={faMessage} className='jfj' /></button>
+                        </button>
                         <button className="btn-2">
                             <Link
                                 activeClass="active"
@@ -225,8 +226,9 @@ function FirstPage() {
                                 duration={1000}
                             >
                                 About Us 
+                                <FontAwesomeIcon icon={faUser} className="jfj" />
                             </Link>
-                            <FontAwesomeIcon icon={faUser} className="jfj" /></button>
+                        </button>
                     </div>
                     
                 </div>

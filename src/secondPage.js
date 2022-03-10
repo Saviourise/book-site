@@ -42,8 +42,9 @@ function SecondPage () {
                             duration={1000}
                         >
                             Books 
+                            <FontAwesomeIcon icon={faBook} className="jfj" />
                         </Link>
-                        <FontAwesomeIcon icon={faBook} className="jfj" /></button>
+                    </button>
                 </section>
 
             </section>
