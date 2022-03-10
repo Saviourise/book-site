@@ -63,7 +63,7 @@ function FirstPage() {
             </Link>
             <Link
                 activeClass="active"
-                to="about"
+                to="book-section"
                 spy={true}
                 smooth={true}
                 duration={1000}
@@ -139,7 +139,7 @@ function FirstPage() {
                     <span className="nav-item">
                         <Link
                             activeClass="active"
-                            to="about"
+                            to="book-section"
                             spy={true}
                             smooth={true}
                             duration={1000}

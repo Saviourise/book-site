@@ -36,7 +36,7 @@ function SecondPage () {
                     <button className="btn-3">
                         <Link
                             activeClass="active"
-                            to="about"
+                            to="book-section"
                             spy={true}
                             smooth={true}
                             duration={1000}
