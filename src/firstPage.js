@@ -217,8 +217,30 @@ function FirstPage() {
                     
                     
                     <div>
-                        <button className="btn-1">Contact Me <FontAwesomeIcon icon={faMessage} className='jfj' /></button>
-                        <button className="btn-2">About Me <FontAwesomeIcon icon={faUser} className="jfj" /></button>
+                        <button className="btn-1">
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={1000}
+                            >
+                                Contact Us 
+                            </Link>
+                            <FontAwesomeIcon icon={faMessage} className='jfj' /></button>
+                        <button className="btn-2">
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={1000}
+                            >
+                                About Us 
+                            </Link>
+                            <FontAwesomeIcon icon={faUser} className="jfj" /></button>
                     </div>
                     
                 </div>
