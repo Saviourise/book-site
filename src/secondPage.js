@@ -1,4 +1,5 @@
-import './secondPage.css';import { Link } from "react-scroll";
+import './secondPage.css';
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook } from '@fortawesome/free-solid-svg-icons'
 

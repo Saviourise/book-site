@@ -1,6 +1,7 @@
 import './thirdPage.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faBookAtlas, faBookBible, faClover, faLandmark, faMicroscope, faPalette } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from "react-scroll";
+import { faBook, faBookAtlas, faBookBible, faClover, faLandmark, faMicroscope, faPalette, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
 function ThirdPage() {
    return (
@@ -63,6 +64,19 @@ function ThirdPage() {
                             </div>
                         </div>
                     </div>
+
+                    <button className="btn-3">
+                        <Link
+                            activeClass="active"
+                            to="book-section"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
+                            See All
+                            <FontAwesomeIcon icon={faSignInAlt} className="jfj" />
+                        </Link>
+                    </button>
                     
                 </div>
             </div>
