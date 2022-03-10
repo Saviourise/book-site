@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import './firstPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faMessage, faUserCircle, faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faMessage, faUserCircle, faBarsStaggered, faBlog } from '@fortawesome/free-solid-svg-icons'
 
 function FirstPage() {
           
@@ -46,6 +46,7 @@ function FirstPage() {
             <a href="#">Books</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
+            <p className='sitename'>Name Of Site</p>
         </div>
 
         <div className='main'>
@@ -58,7 +59,7 @@ function FirstPage() {
                 </nav>
 
                 <div className="nav-contact-2">
-                    <FontAwesomeIcon icon={faUserCircle} className="fa-circle-user-2" />
+                    <FontAwesomeIcon icon={faBlog} className="fa-circle-user-2" />
 
                 </div>
             </header>
@@ -87,10 +88,10 @@ function FirstPage() {
         
                 <div className="nav-contact">
         
-                    <span id="contact-header-name">Saviour Ise</span>
+                    <span id="contact-header-name">Name Of Site</span>
                     
                     <span id="contact-header">
-                    <FontAwesomeIcon icon={faUserCircle} className="fa-circle-user" />
+                    <FontAwesomeIcon icon={faBlog} className="fa-circle-user" />
                     </span>
         
                 </div>

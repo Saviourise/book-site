@@ -43,6 +43,15 @@
     padding: 20px;
 }
 
+.sitename {
+    color: #c94e02;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.5s;
+}
+
 .nav-item {
     color: #c94e02;
 }
