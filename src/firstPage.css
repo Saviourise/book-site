@@ -228,6 +228,13 @@ a {
 
 
 @media screen and (max-width: 700px) {
+    .main {
+        background: linear-gradient(-70deg, #c94e02 55%, rgba(0, 0, 0, 0) 55%), url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaHxlbnwwfHwwfHw%3D&w=1000&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px; 
+        height: 94.2vh;
+    }
     .body {
         height: 90vh;
     }
