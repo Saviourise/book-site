@@ -39,7 +39,6 @@ function SecondPage () {
                             to="about"
                             spy={true}
                             smooth={true}
-                            offset={-70}
                             duration={1000}
                         >
                             Books 

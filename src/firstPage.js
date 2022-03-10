@@ -212,7 +212,6 @@ function FirstPage() {
                                 to="about"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
                                 duration={1000}
                             >
                                 Contact Us 
@@ -224,7 +223,6 @@ function FirstPage() {
                                 to="about"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
                                 duration={1000}
                             >
                                 About Us 
