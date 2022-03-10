@@ -66,7 +66,7 @@ function FirstPage() {
                 to="book-section"
                 spy={true}
                 smooth={true}
-                duration={1000}
+                duration={2000}
                 onClick={closeNav}
             >
                 Books
@@ -142,7 +142,7 @@ function FirstPage() {
                             to="book-section"
                             spy={true}
                             smooth={true}
-                            duration={1000}
+                            duration={2000}
                             className="links"
                         >
                             Books
