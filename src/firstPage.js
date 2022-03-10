@@ -124,6 +124,7 @@ function FirstPage() {
                             Home
                         </Link> 
                     </span>
+                    <hr></hr>
                     <span className="nav-item">
                         <Link
                             activeClass="active"
@@ -136,6 +137,7 @@ function FirstPage() {
                             About
                         </Link>  
                     </span>
+                    <hr></hr>
                     <span className="nav-item">
                         <Link
                             activeClass="active"
@@ -148,6 +150,7 @@ function FirstPage() {
                             Books
                         </Link> 
                     </span>
+                    <hr></hr>
                     <span className="nav-item">
                         <Link
                             activeClass="active"
@@ -160,6 +163,7 @@ function FirstPage() {
                             Services
                         </Link>
                     </span>
+                    <hr></hr>
                     <span className="nav-item">
                         <Link
                             activeClass="active"

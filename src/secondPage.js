@@ -29,6 +29,9 @@ function SecondPage () {
 
             <section className='who-we-are'>
                 <section className='who-we-are-big-text'>
+                    WHO <br></br> WE <br></br> ARE
+                </section>
+                <section className='who-we-are-big-text-2'>
                     WHO WE ARE
                 </section>
                 <section className='who-we-are-small-text'>

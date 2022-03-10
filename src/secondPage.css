@@ -48,6 +48,10 @@
 }
 
 .who-we-are-big-text {
+    display: none;
+}
+
+.who-we-are-big-text-2 {
     flex: 20%;
     width: 100%;
     padding-right: 10px;
@@ -56,6 +60,7 @@
     color: #c94e02;
     opacity: .5;
 }
+
 
 .btn-3 {
     margin-top: 20px;
@@ -133,5 +138,21 @@ i {
     }
     .who-we-are-small-text {
         font-size: 15px;
+    }
+    .who-we-are-big-text-2 {
+        display: none;
+    }
+    .who-we-are-big-text {
+        display: block;
+        flex: 20%;
+        width: 100%;
+        padding-right: 10px;
+        font-size: 30px;
+        transform: rotate(0deg);
+        color: #c94e02;
+        opacity: .5;
+    }
+    .who-we-are {
+
     }
 }
