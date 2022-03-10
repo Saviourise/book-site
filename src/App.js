@@ -1,4 +1,5 @@
 import FirstPage from './firstPage';
+import FourthPage from './fourthPage';
 import SecondPage from './secondPage';
 import ThirdPage from './thirdPage';
 
@@ -8,6 +9,7 @@ function App() {
       <FirstPage />
       <SecondPage />
       <ThirdPage />
+      <FourthPage />
     </>
   );
 }

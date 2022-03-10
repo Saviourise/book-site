@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+    margin: auto;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: -1px;
+}
+
+.contact-section {
+    margin-top: -5px;
+    width: 100%;
+    background-color: rgb(252, 216, 186);
+}

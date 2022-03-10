@@ -1,7 +1,7 @@
 import './thirdPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-scroll";
-import { faBook, faBookAtlas, faBookBible, faClover, faLandmark, faMicroscope, faPalette, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { faBookAtlas, faBookBible, faClover, faLandmark, faMicroscope, faPalette, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
 function ThirdPage() {
    return (
