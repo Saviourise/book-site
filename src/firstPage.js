@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import './firstPage.css';
+import SecondPage from './secondPage';
+import { Link, animateScroll as scroll } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faMessage, faUserCircle, faBarsStaggered, faBlog } from '@fortawesome/free-solid-svg-icons'
 
@@ -37,15 +39,65 @@ function FirstPage() {
     
 
   return (
-    <div className="body">
+    <div className="body" id='body'>
 
         <div className="sidenav">
             <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Books</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <Link
+                activeClass="active"
+                to="body"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+                onClick={closeNav}
+            >
+                Home
+            </Link> 
+            <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+                onClick={closeNav}
+            >
+                About
+            </Link>
+            <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+                onClick={closeNav}
+            >
+                Services
+            </Link>
+            <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+                onClick={closeNav}
+            >
+                Books
+            </Link>
+            <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={1000}
+                onClick={closeNav}
+            >
+                Contact
+            </Link>
             <p className='sitename'>Name Of Site</p>
         </div>
 
@@ -68,19 +120,69 @@ function FirstPage() {
                 <nav className="nav-bar">
         
                     <span className="nav-item">
-                        <a href="#section-1">Home</a>
+                        <Link
+                            activeClass="active"
+                            to="body"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                            className="links"
+                        >
+                            Home
+                        </Link> 
                     </span>
                     <span className="nav-item">
-                        <a href="#section-1">About</a>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                            className="links"
+                        >
+                            About
+                        </Link>  
                     </span>
                     <span className="nav-item">
-                        <a href="#section-1">Books</a>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                            className="links"
+                        >
+                            Books
+                        </Link> 
                     </span>
                     <span className="nav-item">
-                        <a href="#section-1">Services</a>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                            className="links"
+                        >
+                            Services
+                        </Link>
                     </span>
                     <span className="nav-item">
-                        <a href="#section-1">Contact</a>
+                        <Link
+                            activeClass="active"
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={1000}
+                            className="links"
+                        >
+                            Contact
+                        </Link>
                     </span>
         
                 </nav>

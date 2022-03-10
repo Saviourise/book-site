@@ -2,7 +2,7 @@ import './secondPage.css';
 
 function SecondPage () {
     return (
-        <div className='main-2'>
+        <div className='main-2' id='about'>
             <header className='about-us-header'>
                 <p className='about-us-header-text'>About Us</p>
             </header>
