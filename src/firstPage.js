@@ -70,7 +70,7 @@ function FirstPage() {
                 duration={1000}
                 onClick={closeNav}
             >
-                Services
+                Books
             </Link>
             <Link
                 activeClass="active"
@@ -80,7 +80,7 @@ function FirstPage() {
                 duration={1000}
                 onClick={closeNav}
             >
-                Books
+                Services
             </Link>
             <Link
                 activeClass="active"
