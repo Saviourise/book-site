@@ -1,14 +1,13 @@
 import { useEffect } from 'react';
 import './firstPage.css';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faMessage, faUserCircle, faBarsStaggered, faBlog } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faMessage, faBarsStaggered, faBlog } from '@fortawesome/free-solid-svg-icons'
 
 function FirstPage() {
           
 
     useEffect(() => {
-        let windowWidth = window.innerWidth;
         let slideIndex = 0;
         
         
@@ -41,7 +40,7 @@ function FirstPage() {
     <div className="body" id='body'>
 
         <div className="sidenav">
-            <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+            <a className="closebtn" onClick={closeNav}>&times;</a>
             <Link
                 activeClass="active"
                 to="body"
