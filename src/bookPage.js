@@ -36,6 +36,7 @@ class BookPage extends Component {
         request
             .get("https://www.googleapis.com/books/v1/volumes")
             .query({ q: item })
+            .query({ maxResults: 40 })
             .then((data) => {
                 const cleanData = this.cleanData(data)
                 this.setState({
@@ -45,7 +46,7 @@ class BookPage extends Component {
             })
             .catch(async (error) => {
                 await MySwal.fire({
-                    title: "Could not find book, please try again!!",
+                    title: error.message,
                     icon: 'error'
                   })
             })
@@ -63,10 +64,13 @@ class BookPage extends Component {
                 book.volumeInfo['publishedDate'] = '0000';
             }
 
-            else if (book.volumeInfo.hasOwnProperty('imageLinks') === false) {
+            if (book.volumeInfo.hasOwnProperty('imageLinks') === false) {
                 book.volumeInfo['imageLinks'] = { thumbnail: 'https://vignette.wikia.nocookie.net/pandorahearts/images/a/ad/Not_available.jpg/revision/latest?cb=20141020171337' }
             }
 
+            if (book.volumeInfo.hasOwnProperty('authors') === false) {
+                book.volumeInfo['authors'] = ['Not Available']
+            }
             return book;
         })
 
@@ -108,9 +112,9 @@ class BookPage extends Component {
                                     
                                     <img src={book.volumeInfo.imageLinks.thumbnail} alt='Could not generate image' />
                                     <div className='desc'>
-                                        <h3>{book.volumeInfo.title}</h3>
-                                        <h4>Author: {book.volumeInfo.authors[0]}</h4>
-                                        <p>Published: {book.volumeInfo.publishedDate === '0000' ? 'Not Available' : book.volumeInfo.publishedDate.substring(0, 4)}</p>
+                                        <h4 className="h4">{book.volumeInfo.title}</h4>
+                                        <h5 className='h4'>Author: {book.volumeInfo.authors[0]}</h5>
+                                        <p className="h4">Published: {book.volumeInfo.publishedDate === '0000' ? 'Not Available' : book.volumeInfo.publishedDate.substring(0, 4)}</p>
                                     </div>
 
                                 </section>

@@ -216,7 +216,7 @@ function FirstPage() {
 
                         <div>
                             <button className="btn-1">
-                                <Link
+                                <SamePageLink
                                     activeClass="active"
                                     to="contact-section"
                                     spy={true}
@@ -225,10 +225,10 @@ function FirstPage() {
                                 >
                                     Contact Us
                                     <FontAwesomeIcon icon={faMessage} className='jfj' />
-                                </Link>
+                                </SamePageLink>
                             </button>
                             <button className="btn-2">
-                                <Link
+                                <SamePageLink
                                     activeClass="active"
                                     to="about"
                                     spy={true}
@@ -237,7 +237,7 @@ function FirstPage() {
                                 >
                                     About Us
                                     <FontAwesomeIcon icon={faUser} className="jfj" />
-                                </Link>
+                                </SamePageLink>
                             </button>
                         </div>
 
