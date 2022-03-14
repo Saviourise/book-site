@@ -5,6 +5,7 @@ import { faPhoneSquareAlt, faExternalLinkSquare, faShareAltSquare, faUserCircle 
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import{ init } from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 init("Zl7guDgf_6tbfrFkr");
 
@@ -40,7 +41,7 @@ function FourthPage() {
                 from_phone: valueNumber,
                 message: valueMessage,
             })
-            .then(function(response) {
+            .then(async (response) => {
                 //console.log('', response.status, response.text);
                 await MySwal.fire({
                     title: "SUCCESS!",
@@ -48,7 +49,7 @@ function FourthPage() {
                     text: response.text,
                     icon: 'success'
                   })
-            }, function(error) {
+                }).catch(async (error) => {
                  await MySwal.fire({
                     title: "FAILED...",
                     subtitle: error.status,
