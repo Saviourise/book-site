@@ -1,15 +1,14 @@
+import BookPage from './bookPage';
 import FirstPage from './firstPage';
-import FourthPage from './fourthPage';
-import SecondPage from './secondPage';
-import ThirdPage from './thirdPage';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <FirstPage />
-      <SecondPage />
-      <ThirdPage />
-      <FourthPage />
+      <Routes>
+          <Route path="/bookSearch" element={<BookPage />} />
+          <Route path="/" element={<FirstPage />} />
+        </Routes>
     </>
   );
 }

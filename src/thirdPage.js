@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import { faBookAtlas, faBookBible, faClover, faLandmark, faMicroscope, faPalette, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
 function ThirdPage() {
-   return (
+    return (
         <>
             <div className='book-section' id='book-section'>
                 <header className='book-header'>
@@ -35,7 +35,7 @@ function ThirdPage() {
                             </div>
                             <div className='icon-text'>
                                 Business
-                            </div>       
+                            </div>
                         </div>
                     </div>
                     <div className='item-group'>
@@ -77,11 +77,11 @@ function ThirdPage() {
                             <FontAwesomeIcon icon={faSignInAlt} className="jfj" />
                         </Link>
                     </button>
-                    
+
                 </div>
             </div>
         </>
-   )
+    )
 }
 
 export default ThirdPage;
