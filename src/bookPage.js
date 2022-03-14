@@ -45,11 +45,12 @@ class BookPage extends Component {
                 this.setState({
                     books: cleanData
                 })
-                console.log(data)
+                //console.log(data)
             })
             .catch(async (error) => {
                 await MySwal.fire({
-                    title: error.message,
+                    title: "Error",
+                    text: "An error occurred while performing the search, please try again",
                     icon: 'error'
                   })
             })
