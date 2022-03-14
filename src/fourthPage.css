@@ -121,30 +121,8 @@ textarea {
     letter-spacing: 1px;
 }
 
-
-.img-2 {
-    width: 250px;
-    height: auto;
-}
-
 .form-2-section-img {
     margin: 20px 0px;
-}
-
-.form-contact-section {
-    flex-direction: column;
-    width: 80%;
-}
-
-.form-section {
-    margin-right: 0px;
-    margin-bottom: 20px;
-}
-
-.form-2-section {
-    margin-left: 0px;
-    margin-top: 20px;
-    width: 100%;
 }
 
 .ala {
@@ -153,7 +131,28 @@ textarea {
     padding: 10px;
 }
 
-.div-icons {
-    text-align: center;
-    padding: 20px;
+@media screen and (max-width: 700px) {
+
+    
+    .form-contact-section {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .form-section {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .form-2-section {
+        margin-left: 0px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .div-icons {
+        text-align: center;
+        padding: 20px;
+    }
+
 }
