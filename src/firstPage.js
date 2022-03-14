@@ -78,13 +78,13 @@ function FirstPage() {
                 </Link>
                 <SamePageLink
                     activeClass="active"
-                    to="about"
+                    to="book-section"
                     spy={true}
                     smooth={true}
-                    duration={1000}
+                    duration={2000}
                     onClick={closeNav}
                 >
-                    Services
+                    Books
                 </SamePageLink>
                 <SamePageLink
                     activeClass="active"
@@ -156,13 +156,13 @@ function FirstPage() {
                         <span className="nav-item">
                             <SamePageLink
                                 activeClass="active"
-                                to="about"
+                                to="book-section"
                                 spy={true}
                                 smooth={true}
-                                duration={1000}
+                                duration={2000}
                                 className="links"
                             >
-                                Services
+                                Books
                             </SamePageLink>
                         </span>
                         <hr></hr>
@@ -172,7 +172,7 @@ function FirstPage() {
                                 to="contact-section"
                                 spy={true}
                                 smooth={true}
-                                duration={4000}
+                                duration={3000}
                                 className="links"
                             >
                                 Contact
