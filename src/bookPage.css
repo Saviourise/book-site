@@ -84,7 +84,22 @@
     text-align: center;
 }
 
+.go-back-fixed {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    bottom: 0;
+    right: 0;
+}
 
+.go-home-text {
+    text-decoration: none;
+    color: black;
+}
+
+.gojfj {
+    padding-right: 10px;
+}
 
 @media screen and (max-width: 700px) {
     .search-input {

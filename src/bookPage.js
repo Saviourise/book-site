@@ -2,9 +2,12 @@ import { Component } from 'react'
 import './bookPage.css'
 import request from 'superagent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import {
+    Link
+} from "react-router-dom";
 
 const MySwal = withReactContent(Swal)
 
@@ -42,7 +45,7 @@ class BookPage extends Component {
                 this.setState({
                     books: cleanData
                 })
-                console.log(data)
+                //console.log(data)
             })
             .catch(async (error) => {
                 await MySwal.fire({
@@ -90,6 +93,15 @@ class BookPage extends Component {
         })
         return (
             <>
+                <p className="go-back-fixed">
+                    <Link
+                        to="/"
+                        className="go-home-text"
+                    >
+                        <FontAwesomeIcon icon={faSignOutAlt} className="gojfj" />
+                        Go Back Home
+                    </Link>
+                </p>
                 <div className='header-book-search'>
                     <FontAwesomeIcon icon={faBook} className="jfj" />
                     <p className='book-search-p'>Book Search</p>

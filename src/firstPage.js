@@ -4,12 +4,8 @@ import { Link as SamePageLink } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faMessage, faBarsStaggered, faBlog } from '@fortawesome/free-solid-svg-icons'
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
     Link
 } from "react-router-dom";
-import BookPage from './bookPage';
 
 import FourthPage from './fourthPage';
 import SecondPage from './secondPage';
@@ -78,7 +74,7 @@ function FirstPage() {
                     to="/bookSearch"
                     onClick={closeNav}
                 >
-                    Books
+                    Search
                 </Link>
                 <SamePageLink
                     activeClass="active"
@@ -153,7 +149,7 @@ function FirstPage() {
                                 to="/bookSearch"
                                 className="links"
                             >
-                                Books
+                                Search
                             </Link>
                         </span>
                         <hr></hr>
