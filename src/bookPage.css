@@ -111,8 +111,16 @@
         gap: 50px 20px;
         justify-content: center;
     }
-
     .h4 {
+        font-size: 80%;
+    }
+    .go-back-fixed {
+        display: none;
+    }
+    
+    .go-home-text {
+        text-decoration: none;
+        color: black;
         font-size: 80%;
     }
 }

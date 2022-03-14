@@ -89,6 +89,15 @@
     box-shadow: 0px 0px 5px black;
 }
 
+.go-book-text {
+    text-decoration: none;
+    color: #c94e02;
+}
+
+.bookjfj {
+    padding-left: 10px;
+}
+
 @media screen and (max-width: 700px) {
     .item-group {
         display: flex;
