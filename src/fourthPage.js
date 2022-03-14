@@ -2,7 +2,13 @@ import { useState } from 'react';
 import './fourthPage.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneSquareAlt, faExternalLinkSquare, faShareAltSquare, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import{ init } from '@emailjs/browser';
 
+init("Zl7guDgf_6tbfrFkr");
+
+const MySwal = withReactContent(Swal)
 
 function FourthPage() {
     const [valueName, setValueName] = useState('')
@@ -27,12 +33,34 @@ function FourthPage() {
     }
 
     const handleSubmit = (event) => {
-        alert('A name was submitted: ' + valueName);
+        event.preventDefault();
+        emailjs.send('service_g5xsofk', 'template_7xt671b', {
+                from_name: valueName,
+                from_email: valueEmail,
+                from_phone: valueNumber,
+                message: valueMessage,
+            })
+            .then(function(response) {
+                //console.log('', response.status, response.text);
+                await MySwal.fire({
+                    title: "SUCCESS!",
+                    subtitle: response.status,
+                    text: response.text,
+                    icon: 'success'
+                  })
+            }, function(error) {
+                 await MySwal.fire({
+                    title: "FAILED...",
+                    subtitle: error.status,
+                    text: error.text,
+                    icon: 'error'
+                  })
+                //console.log('FAILED...', error);
+            });
         setValueName('')
         setValueEmail('')
         setValueNumber('')
         setValueMessage('')
-        event.preventDefault();
     }
     return (
         <>
