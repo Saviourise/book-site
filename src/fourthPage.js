@@ -45,15 +45,13 @@ function FourthPage() {
                 //console.log('', response.status, response.text);
                 await MySwal.fire({
                     title: "SUCCESS!",
-                    subtitle: response.status,
-                    text: response.text,
+                    text: "Email sent successfully",
                     icon: 'success'
                   })
                 }).catch(async (error) => {
                  await MySwal.fire({
                     title: "FAILED...",
-                    subtitle: error.status,
-                    text: error.text,
+                    text: error.message,
                     icon: 'error'
                   })
                 //console.log('FAILED...', error);
