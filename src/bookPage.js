@@ -45,7 +45,7 @@ class BookPage extends Component {
                 this.setState({
                     books: cleanData
                 })
-                //console.log(data)
+                console.log(data)
             })
             .catch(async (error) => {
                 await MySwal.fire({
@@ -93,20 +93,11 @@ class BookPage extends Component {
         })
         return (
             <>
-                <p className="go-back-fixed">
-                    <Link
-                        to="/"
-                        className="go-home-text"
-                    >
-                        <FontAwesomeIcon icon={faSignOutAlt} className="gojfj" />
-                        Go Back Home
-                    </Link>
-                </p>
                 <div className='header-book-search'>
                     <FontAwesomeIcon icon={faBook} className="jfj" />
                     <p className='book-search-p'>Book Search</p>
                 </div>
-                <form onSubmit={this.handleSubmit} className='form-section'>
+                <form onSubmit={this.handleSubmit} className='form-section-book'>
                     <input required type="text" placeholder='Search For Book' className='search-input' value={this.state.value} onChange={this.handleChange} />
                     <input type="submit" value="Search" className='submit-btn' />
                     <select defaultValue="Sort" onChange={this.handleSort} className='sort-btn'>
@@ -121,14 +112,14 @@ class BookPage extends Component {
                         sortedBooks.map((book, i) => {
                             return (
                                 <section className='book-card' key={i}>
-                                    
-                                    <img src={book.volumeInfo.imageLinks.thumbnail} alt='Could not generate image' />
-                                    <div className='desc'>
-                                        <h4 className="h4">{book.volumeInfo.title}</h4>
-                                        <h5 className='h4'>Author: {book.volumeInfo.authors[0]}</h5>
-                                        <p className="h4">Published: {book.volumeInfo.publishedDate === '0000' ? 'Not Available' : book.volumeInfo.publishedDate.substring(0, 4)}</p>
-                                    </div>
-
+                                    <a className="h4-link" href={book.volumeInfo.previewLink} target="_blank">
+                                        <img src={book.volumeInfo.imageLinks.thumbnail} alt='Could not generate image' />
+                                        <div className='desc'>
+                                            <h4 className="h4">{book.volumeInfo.title}</h4>
+                                            <h5 className='h4'>Author: {book.volumeInfo.authors[0]}</h5>
+                                            <p className="h4">Published: {book.volumeInfo.publishedDate === '0000' ? 'Not Available' : book.volumeInfo.publishedDate.substring(0, 4)}</p>
+                                        </div>
+                                    </a>
                                 </section>
                             )
                         }) : 
