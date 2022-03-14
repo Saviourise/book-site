@@ -68,7 +68,7 @@ class BookPage extends Component {
             }
 
             if (book.volumeInfo.hasOwnProperty('imageLinks') === false) {
-                book.volumeInfo['imageLinks'] = { thumbnail: 'https://vignette.wikia.nocookie.net/pandorahearts/images/a/ad/Not_available.jpg/revision/latest?cb=20141020171337' }
+                book.volumeInfo['imageLinks'] = { thumbnail: '' }
             }
 
             if (book.volumeInfo.hasOwnProperty('authors') === false) {
