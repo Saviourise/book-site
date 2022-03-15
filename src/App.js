@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <Routes>
+          <Route path="/bookSearch/:itemSearch" element={<BookPage />} />
           <Route path="/bookSearch" element={<BookPage />} />
           <Route path="/" element={<FirstPage />} />
         </Routes>

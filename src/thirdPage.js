@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     Link
 } from "react-router-dom";
-import { faBookAtlas, faBookBible, faClover, faLandmark, faMicroscope, faPalette, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { faBookAtlas, faBookBible, faFilm, faLandmark, faMicroscope, faPalette, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
 function ThirdPage() {
     return (
@@ -16,54 +16,78 @@ function ThirdPage() {
                 <div className='books-list'>
                     <div className='item-group'>
                         <div className='books-list-items'>
-                            <div className='icon-item'>
-                                <FontAwesomeIcon icon={faMicroscope} className="book-icon" />
-                            </div>
-                            <div className='icon-text'>
-                                Science
-                            </div>
+                            <Link
+                                to={"/bookSearch/science"}
+                            >
+                                <div className='icon-item'>
+                                    <FontAwesomeIcon icon={faMicroscope} className="book-icon" />
+                                </div>
+                                <div className='icon-text'>
+                                        Science
+                                </div>
+                            </Link>
                         </div>
                         <div className='books-list-items'>
-                            <div className='icon-item'>
-                                <FontAwesomeIcon icon={faPalette} className="book-icon" />
-                            </div>
-                            <div className='icon-text'>
-                                Art
-                            </div>
+                            <Link
+                                to={"/bookSearch/art"}
+                            >
+                                <div className='icon-item'>
+                                    <FontAwesomeIcon icon={faPalette} className="book-icon" />
+                                </div>
+                                <div className='icon-text'>
+                                    Art
+                                </div>
+                            </Link>
                         </div>
                         <div className='books-list-items'>
-                            <div className='icon-item'>
-                                <FontAwesomeIcon icon={faLandmark} className="book-icon" />
-                            </div>
-                            <div className='icon-text'>
-                                Business
-                            </div>
+                            <Link
+                                to={"/bookSearch/business"}
+                            >
+                                <div className='icon-item'>
+                                    <FontAwesomeIcon icon={faLandmark} className="book-icon" />
+                                </div>
+                                <div className='icon-text'>
+                                    Business
+                                </div>
+                            </Link>
                         </div>
                     </div>
                     <div className='item-group'>
                         <div className='books-list-items'>
-                            <div className='icon-item'>
-                                <FontAwesomeIcon icon={faClover} className="book-icon" />
-                            </div>
-                            <div className='icon-text'>
-                                Novel
-                            </div>
+                            <Link
+                                to={"/bookSearch/comic"}
+                            >
+                                <div className='icon-item'>
+                                    <FontAwesomeIcon icon={faFilm} className="book-icon" />
+                                </div>
+                                <div className='icon-text'>
+                                    Comic
+                                </div>
+                            </Link>
                         </div>
                         <div className='books-list-items'>
-                            <div className='icon-item'>
-                                <FontAwesomeIcon icon={faBookAtlas} className="book-icon" />
-                            </div>
-                            <div className='icon-text'>
-                                Research
-                            </div>
+                            <Link
+                                to={"/bookSearch/research"}
+                            >
+                                <div className='icon-item'>
+                                    <FontAwesomeIcon icon={faBookAtlas} className="book-icon" />
+                                </div>
+                                <div className='icon-text'>
+                                    Research
+                                </div>
+                            </Link>
                         </div>
                         <div className='books-list-items'>
-                            <div className='icon-item'>
-                                <FontAwesomeIcon icon={faBookBible} className="book-icon" />
-                            </div>
-                            <div className='icon-text'>
-                                Religion
-                            </div>
+                            <Link
+                                to={"/bookSearch/religion"}
+                            >
+                                <div className='icon-item'>
+                                    <FontAwesomeIcon icon={faBookBible} className="book-icon" />
+                                </div>
+                                <div className='icon-text'>
+                                    Religion
+                                </div>
+                            </Link>
                         </div>
                     </div>
 

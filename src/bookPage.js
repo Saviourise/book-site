@@ -1,47 +1,65 @@
-import { Component } from 'react'
+import { Component, useEffect, useState } from 'react'
 import './bookPage.css'
 import request from 'superagent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { Routes, Route, useParams } from 'react-router-dom';
+
 
 const MySwal = withReactContent(Swal)
 
-class BookPage extends Component {
+function BookPage() {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: '',
-            books: [],
-            sort: ''
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         value: '',
+    //         books: [],
+    //         sort: ''
+    //     };
+    //     this.handleChange = this.handleChange.bind(this);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
+    // }
+
+    const [value, setValue] = useState('')
+    const [books, setBooks] = useState([])
+    const [sort, setSort] = useState('')
+
+    let { itemSearch } = useParams();
+
+    useEffect(() => {
+
+        if (itemSearch) {
+            setValue(itemSearch)
+            search(itemSearch)
+        }
+      
+    }, [])
+    
+
+    const handleChange = (event) => {
+        setValue(
+            event.target.value
+        );
     }
 
-    handleChange = (event) => {
-        this.setState({
-            value: event.target.value
-        });
-    }
-
-    handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        this.search(this.state.value)
+        search(value)
     }
 
-    search = (item) => {
+    const search = (item) => {
         request
             .get("https://www.googleapis.com/books/v1/volumes")
             .query({ q: item })
             .query({ maxResults: 40 })
             .then((data) => {
-                const cleanData = this.cleanData(data)
-                this.setState({
-                    books: cleanData
-                })
+                const cleanedData = cleanData(data)
+                setBooks(
+                    cleanedData
+                )
                 //console.log(data)
             })
             .catch(async (error) => {
@@ -53,13 +71,13 @@ class BookPage extends Component {
             })
     }
 
-    handleSort = (event) => {
-        this.setState({
-            sort: event.target.value
-        })
+    const handleSort = (event) => {
+        setSort(
+            event.target.value
+        )
     }
 
-    cleanData = (data) => {
+    const cleanData = (data) => {
         const cleanedData = data.body.items.map((book) => {
             if (book.volumeInfo.hasOwnProperty('publishedDate') === false) {
                 book.volumeInfo['publishedDate'] = '0000';
@@ -79,13 +97,13 @@ class BookPage extends Component {
     }
 
 
-    render() {
-        const sortedBooks = this.state.books.sort((a, b) => {
-            if (this.state.sort === 'Newest') {
+    // render() {
+        const sortedBooks = books.sort((a, b) => {
+            if (sort === 'Newest') {
                 return parseInt(b.volumeInfo.publishedDate.substring(0, 4)) - parseInt(a.volumeInfo.publishedDate.substring(0, 4))
             }
 
-            else if (this.state.sort === 'Oldest') {
+            else if (sort === 'Oldest') {
                 return parseInt(a.volumeInfo.publishedDate.substring(0, 4)) - parseInt(b.volumeInfo.publishedDate.substring(0, 4))
             }
         })
@@ -95,10 +113,10 @@ class BookPage extends Component {
                     <FontAwesomeIcon icon={faBook} className="jfj" />
                     <p className='book-search-p'>Book Search</p>
                 </div>
-                <form onSubmit={this.handleSubmit} className='form-section-book'>
-                    <input required type="text" placeholder='Search For Book' className='search-input' value={this.state.value} onChange={this.handleChange} />
+                <form onSubmit={handleSubmit} className='form-section-book'>
+                    <input required type="text" placeholder='Search For Book' className='search-input' value={value} onChange={handleChange} />
                     <input type="submit" value="Search" className='submit-btn' />
-                    <select defaultValue="Sort" onChange={this.handleSort} className='sort-btn'>
+                    <select defaultValue="Sort" onChange={handleSort} className='sort-btn'>
                         <option disabled value='Sort' className='option'>Sort</option>
                         <option value='Newest' className='option'>Newest</option>
                         <option value='Oldest' className='option'>Oldest</option>
@@ -129,6 +147,6 @@ class BookPage extends Component {
         )
     }
 
-}
+//}
 
 export default BookPage;

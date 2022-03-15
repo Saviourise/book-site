@@ -10,6 +10,7 @@ import {
 import FourthPage from './fourthPage';
 import SecondPage from './secondPage';
 import ThirdPage from './thirdPage';
+import FooterPage from './footer';
 
 function FirstPage() {
 
@@ -246,6 +247,7 @@ function FirstPage() {
         <SecondPage />
         <ThirdPage />
         <FourthPage />
+        <FooterPage />
         </>
     );
 }

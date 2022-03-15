@@ -12,6 +12,10 @@
     width: 100%;
     background-color: rgb(252, 216, 186);
     padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contact-header {

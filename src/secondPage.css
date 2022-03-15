@@ -11,6 +11,10 @@
     margin-top: -5px;
     width: 100%;
     background-color: rgb(252, 216, 186);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .img-1 {
