@@ -123,6 +123,7 @@ textarea {
     box-shadow: 0px 0px 2px black inset;
     height: auto;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 .form-2-section-img {
@@ -133,6 +134,7 @@ textarea {
     color: #ec9563;
     font-size: 25px;
     padding: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 700px) {

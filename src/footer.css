@@ -7,3 +7,46 @@
     font-family: 'Space Mono', monospace;
     letter-spacing: -1px;
 }
+
+.footer-page {
+    background-color: #c94e02;
+    padding: 20px;
+}
+
+.footer-icon {
+    padding-right: 10px;
+}
+
+.header-footer {
+    color: #ec9563;
+    margin-bottom: 20px;
+}
+
+.nav-footer {
+    cursor: pointer;
+}
+
+.footer-nav-item {
+    display: block;
+    padding-bottom: 10px;
+    color: white;
+    
+}
+
+.footer-links {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.kfglfm {
+    color: #ec9563;
+    margin-bottom: 10px;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+    font-size: 70%;
+}
