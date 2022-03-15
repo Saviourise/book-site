@@ -88,6 +88,7 @@ function FooterPage() {
                         <p className="footer-nav-item">Email.js</p>
                         <p className="footer-nav-item">SweetAlert</p>
                         <p className="footer-nav-item">FontAwesome</p>
+                        <p className="footer-nav-item">Google Books</p>
                     </div>
 
                     <div className="center">
